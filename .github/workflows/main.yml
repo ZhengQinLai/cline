@@ -83,13 +83,6 @@ jobs:
               run: |
                   # Required to generate the .vsix
                   vsce package --out "cline-${{ steps.get_version.outputs.version }}.vsix"
-                  if [ "${{ github.event.inputs.release-type }}" = "pre-release" ]; then
-                    npm run publish:marketplace:prerelease
-                    echo "Successfully published pre-release version ${{ steps.get_version.outputs.version }} to VS Code Marketplace and Open VSX Registry"
-                  else
-                    npm run publish:marketplace
-                    echo "Successfully published release version ${{ steps.get_version.outputs.version }} to VS Code Marketplace and Open VSX Registry"
-                  fi
             # - name: Get Changelog Entry
             #   id: changelog
             #   uses: mindsers/changelog-reader-action@v2
