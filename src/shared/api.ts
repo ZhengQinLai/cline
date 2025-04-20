@@ -1282,11 +1282,11 @@ export type LiteLLMModelId = string
 export const liteLlmDefaultModelId = "gpt-3.5-turbo"
 export const liteLlmModelInfoSaneDefaults: ModelInfo = {
 	maxTokens: -1,
-	contextWindow: 1_048_576,
+	contextWindow: 250_000,
 	supportsImages: true,
 	supportsPromptCache: true,
-	inputPrice: 0,
-	outputPrice: 0,
+	inputPrice: 1.25,
+	outputPrice: 10,
 	cacheWritesPrice: 0,
 	cacheReadsPrice: 0,
 }
